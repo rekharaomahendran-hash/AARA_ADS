@@ -70,257 +70,104 @@ BORDER = "#3a3a3a"
 # ---------------------------------------------------------
 CSS = f"""
 <style>
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap');
 
-:root {{
+:root {
     color-scheme: dark;
-}}
+}
 
-html, body, [data-testid="stAppViewContainer"] {{
+html, body, [data-testid="stAppViewContainer"] {
     background: linear-gradient(180deg, {BG_TOP} 0%, {BG_BOTTOM} 100%) !important;
     color: {TEXT} !important;
-}}
+}
 
-* {{
+* {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui;
-}}
+}
 
-.block-container {{
-  padding-top: 0.5rem;
-  max-width: 900px;
-  animation: fadeIn 0.4s ease;
-}}
+/* MERGED block-container — only ONE version */
+.block-container {
+    padding-top: 40px !important;
+    max-width: 900px !important;
+    animation: fadeIn 0.4s ease;
+}
 
-@keyframes fadeIn {{
-  from {{ opacity: 0; transform: translateY(6px); }}
-  to {{ opacity: 1; transform: translateY(0); }}
-}}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-.section {{
-  background:{CARD_BG};
-  padding:18px;
-  border-radius:14px;
-  border:1px solid {BORDER};
-  margin-bottom:14px;
-}}
-
-.title {{
-  font-size:1.6rem;
-  font-weight:700;
-  color:{GOLD};
-  font-family:'Playfair Display', serif;
-}}
-
-.subtitle {{
-  font-size:1rem;
-  color:{GOLD_SOFT};
-  margin-bottom:10px;
-}}
-
-.btn-primary {{
-  display:inline-block;
-  padding:12px 22px;
-  background:{GOLD};
-  color:{BG_TOP} !important;
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:600;
-  transition: background 0.2s ease;
-}}
-.btn-primary:hover {{
-  background:{GOLD_SOFT};
-}}
-
-.btn-secondary {{
-  display:inline-block;
-  padding:12px 22px;
-  background:white;
-  color:{TEXT} !important;
-  border-radius:999px;
-  border:1px solid #d1d5db;
-  text-decoration:none;
-  font-weight:500;
-  transition: background 0.2s ease;
-}}
-.btn-secondary:hover {{
-  background:#f2f2f7;
-}}
-
-.whatsapp-btn {{
-  position:fixed;
-  top:70px;
-  right:20px;
-  background:#25D366;
-  color:white;
-  padding:14px 16px;
-  border-radius:50%;
-  font-size:22px;
-  text-decoration:none;
-  box-shadow:0 4px 12px rgba(0,0,0,0.2);
-  z-index:9999;
-}}
-
-.bottom-nav {{
-  position:fixed;
-  bottom:0;
-  left:0;
-  right:0;
-  background:{CARD_BG};
-  border-top:1px solid {BORDER};
-  display:flex;
-  justify-content:space-around;
-  padding:10px 0;
-  z-index:999;
-}}
-
-.bottom-nav a {{
-  text-decoration:none;
-  font-size:0.85rem;
-  color:{TEXT};
-  text-align:center;
-}}
-
-.bottom-nav a span {{
-  display:block;
-  font-size:1.2rem;
-}}
-
-.bottom-nav a.active {{
-  color:{GOLD};
-}}
-
-.class-card {{
-  padding:10px;
-  border-radius:10px;
-  background:rgba(15,23,42,0.03);
-  border:1px solid {BORDER};
-  margin-bottom:8px;
-}}
-
-.required-label::after {{
-    content: " *";
-    color: #e11d48;
-    font-weight: 700;
-}}
-
-@keyframes shake {{
-  10%, 90% {{ transform: translateX(-1px); }}
-  20%, 80% {{ transform: translateX(2px); }}
-  30%, 50%, 70% {{ transform: translateX(-4px); }}
-  40%, 60% {{ transform: translateX(4px); }}
-}}
-
-.shake {{
-  animation: shake 0.35s ease-in-out;
-}}
-
-.footer {{
-  text-align:center;
-  color:#9ca3af;
-  font-size:0.8rem;
-  margin-top:40px;
-  margin-bottom:60px;
-}}
-
-.reg-card {{
-  border-radius:14px;
-  border:1px solid {BORDER};
-  background:{CARD_BG};
-  padding:14px 16px;
-  margin-bottom:12px;
-  box-shadow:0 4px 10px rgba(15,23,42,0.06);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-  cursor:pointer;
-}}
-.reg-card:hover {{
-  transform: translateY(-4px);
-  box-shadow:0 10px 24px rgba(15,23,42,0.14);
-  border-color:{GOLD};
-}}
-
-.reg-card-header {{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  font-weight:600;
-  font-size:1rem;
-  color:{TEXT};
-}}
-
-.reg-card-sub {{
-  font-size:0.9rem;
-  color:#6b7280;
-  margin-top:4px;
-}}
+/* your other CSS continues normally… */
 
 /* -------------------------
    REGISTRATION FORM FIXES
-   Ensure all form controls match the dark theme:
-   - Background: #151515
-   - Text: soft gold (#f5e8c7)
-   - Border: gold (#d4af37)
-   - Placeholder color adjusted
-   - Select arrow and radio visuals themed
-   ------------------------- */
+-------------------------- */
 
-label {{
+label {
   color:{GOLD_SOFT} !important;
-}}
+}
 
-input, textarea, select {{
+input, textarea, select {
   background:#151515 !important;
   color:{GOLD_SOFT} !important;
   border:1px solid {GOLD} !important;
   border-radius:8px !important;
-}}
+}
 
-input::placeholder, textarea::placeholder {{
+input::placeholder, textarea::placeholder {
   color:{GOLD_SOFT} !important;
   opacity:0.85 !important;
-}}
+}
 
-.stTextInput input,
-.stTextArea textarea,
-.stSelectbox select,
-.stDateInput input {{
-  background:#151515 !important;
-  color:{GOLD_SOFT} !important;
-  border:1px solid {GOLD} !important;
-}}
+/* Selectbox + Multiselect */
+div[data-baseweb="select"] {
+    background:#151515 !important;
+    color:#f5e8c7 !important;
+    border:1px solid #d4af37 !important;
+}
+div[data-baseweb="select"] * {
+    color:#f5e8c7 !important;
+}
+div[data-baseweb="select"] svg {
+    fill:#d4af37 !important;
+}
 
-.stSelectbox div[data-baseweb="select"] {{
-  background:#151515 !important;
-  color:{GOLD_SOFT} !important;
-  border:1px solid {GOLD} !important;
-}}
+/* Multiselect chips */
+div[data-baseweb="tag"] {
+    background:#8b0000 !important;
+    color:#f5e8c7 !important;
+    border-radius:6px !important;
+}
 
-.stSelectbox svg {{
-  fill:{GOLD} !important;
-}}
+/* Radio buttons */
+.stRadio label {
+    color:#f5e8c7 !important;
+    opacity:1 !important;
+}
+.stRadio div[role="radio"] {
+    border:2px solid #d4af37 !important;
+}
+.stRadio div[role="radio"] input[type="radio"] {
+    accent-color:#d4af37 !important;
+}
 
-.stMultiSelect div {{
-  background:#151515 !important;
-  color:{GOLD_SOFT} !important;
-  border:1px solid {GOLD} !important;
-}}
+/* Date input */
+.stDateInput input {
+    background:#151515 !important;
+    color:#f5e8c7 !important;
+    border:1px solid #d4af37 !important;
+}
 
-.stRadio label, .stRadio div[role="radio"] {{
-  color:{GOLD_SOFT} !important;
-}}
-
-.stRadio div[role="radio"] input[type="radio"] {{
-  accent-color: {GOLD} !important;
-}}
-
-.stDateInput input {{
-  background:#151515 !important;
-  color:{GOLD_SOFT} !important;
-  border:1px solid {GOLD} !important;
-}}
+/* Required field red star */
+.required-label::after {
+    content:" *";
+    color:#ff4d4d;
+    font-weight:900;
+}
 
 </style>
 """
-st.markdown(CSS, unsafe_allow_html=True)
 
 /* Extra spacing so logo is never clipped */
 .block-container {
