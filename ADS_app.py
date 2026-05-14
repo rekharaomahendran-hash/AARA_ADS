@@ -17,7 +17,7 @@ import io
 try:
 import qrcode
 except ImportError:
-    qrcode = None
+qrcode = None
 
 # ---------------------------------------------------------
 # PAGE CONFIG
