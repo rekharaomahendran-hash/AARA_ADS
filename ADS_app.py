@@ -15,7 +15,7 @@ from PIL import Image
 import io
 
 try:
-    import qrcode
+import qrcode
 except ImportError:
     qrcode = None
 
