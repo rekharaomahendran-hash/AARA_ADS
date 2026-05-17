@@ -462,7 +462,7 @@ def get_pricing():
     # Early bird: cheaper 4-class price, 8-class updated to $100
     if is_early_bird_active():
         return {
-            "four": 50,
+            "four": 60,
             "eight": 100,
             "enrollment": 50,  # $50/month early bird
         }
@@ -539,7 +539,7 @@ def render_early_banner():
               ★ Early Bird Offer ★&nbsp;&nbsp;
               <b>${enroll_price}/month for 3 months (June, July &amp; August)</b> — Limited to first 10 registrations!
               <br>
-              4 classes early-bird: <b>${pricing['four']}</b> · 8 classes: <b>${pricing['eight']}</b>
+              4 classes (regular): <b>${pricing['four']}</b> · 8 classes: <b>${pricing['eight']}</b>
             </div>
             """,
             unsafe_allow_html=True,
