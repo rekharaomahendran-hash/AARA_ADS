@@ -562,7 +562,7 @@ render_early_banner()
 # WHATSAPP BUTTON (Top Right)
 st.markdown(
     """
-    <a class="whatsapp-btn" href="https://wa.me/14691234567" target="_blank">
+    <a class="whatsapp-btn" href="https://wa.me/16318367972" target="_blank">
       💬
     </a>
     """,
