@@ -1045,6 +1045,8 @@ def render_register():
             missing.append("Gender")
         if not enrollment or not enrollment.strip():
             missing.append("Enrollment Type")
+        if not class_type or not class_type.strip():
+            missing.append("Class Type")
         if not mode:
             missing.append("Mode")
         if not level or not level.strip():
@@ -1106,6 +1108,7 @@ def render_register():
                 "email": email,
                 "address": address,
                 "enrollment": enrollment,
+                "class_type": class_type,
                 "mode": mode,
                 "workshops": "; ".join(workshops),
                 "level": level,
