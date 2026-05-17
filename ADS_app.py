@@ -12,6 +12,22 @@ import json
 import base64
 from datetime import datetime, date
 
+# Robust rerun helper (place after imports)
+def safe_rerun():
+    try:
+        # Preferred simple API when available
+        st.experimental_rerun()
+    except Exception:
+        # Fallback for Streamlit builds where experimental_rerun is not exposed
+        try:
+            from streamlit.runtime.scriptrunner import RerunException
+            raise RerunException()
+        except Exception:
+            # Last resort: set a session flag and stop execution so UI updates on next interaction
+            st.session_state._force_refresh = not st.session_state.get("_force_refresh", False)
+            st.stop()
+
+
 # Optional QR code support
 try:
     import qrcode
@@ -838,7 +854,7 @@ def render_admin():
                     st.warning("Delete ALL selected. Type DELETE in the box below and press Confirm Delete to permanently remove all rows.")
             with col_c:
                 if st.button("Refresh list"):
-                    st.experimental_rerun()
+                    st.safe_rerun()
         
             # If there is a pending delete set, show confirmation input
             if st.session_state.get("_pending_delete"):
@@ -873,7 +889,7 @@ def render_admin():
                                 df_new.to_csv(REG_FILE, index=False)
                                 st.success(f"Deleted {len(drop_indices)} row(s). Backup saved to: {backup_path if backup_path else 'not created'}")
                                 # Refresh the admin page to show updated table
-                                st.experimental_rerun()
+                                st.safe_rerun()
                             except Exception as e:
                                 st.error(f"Error deleting rows: {e}")
         
