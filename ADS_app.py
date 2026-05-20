@@ -762,6 +762,31 @@ def render_classes():
         '<div style="text-align:center; margin-top:10px;"><a class="btn-primary" href="/?page=Register">Register Now</a></div>',
         unsafe_allow_html=True,
     )
+    # Address card under Register Now (paste after the Register CTA)
+    studio_address = "AARA Dance Studio, Fate, Rockwall, Dallas, TX"
+    google_short_link = "https://maps.app.goo.gl/6SFoVDtau8oQULao9?g_st=ic"
+    # Apple Maps fallback using the address (URL-encoded)
+    import urllib.parse
+    apple_maps_link = f"https://maps.apple.com/?q={urllib.parse.quote(studio_address)}"
+    
+    st.markdown(
+        f"""
+        <div class="classes-address-row">
+          <div class="address-card">
+            <div class="title">Visit Us</div>
+            <div style="color:#f5e8c7; line-height:1.4;">{studio_address}</div>
+            <div style="margin-top:10px;" class="address-links">
+              <a href="{google_short_link}" target="_blank" rel="noopener">Open in Google Maps</a>
+              <a href="{apple_maps_link}" target="_blank" rel="noopener">Open in Apple Maps</a>
+            </div>
+            <div style="margin-top:8px; color:#9ca3af; font-size:0.85rem;">
+              Parking available · Please arrive 10 minutes early
+            </div>
+          </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
     st.markdown('</div>', unsafe_allow_html=True)
 
@@ -947,7 +972,6 @@ def render_register():
         "pref_time": "_req_pref_time",
         "signature": "_req_signature",
         "class_type": "_req_classtype",
-        "location_pref": "_req_location",
     }
 
     # The form (submit button must be inside the form)
@@ -1015,23 +1039,13 @@ def render_register():
             [
                 "",
                 f"Tiny Stars(Age 5-8)",
-                f"Shining Stars(Age 9+)",
+                f"Shiny Stars(Age 9+)",
                 "Dream Chasers(Ladies 19+)",
             ],
             key="class",
             label_visibility="collapsed",
         )
-        st.markdown('<label class="required-label">Preferred Location</label>', unsafe_allow_html=True)
-        location_pref = st.selectbox(
-            "",
-            [
-                "",
-                f"Rockwall/Fate TX",
-                "Frisco, TX",
-            ],
-            key="location",
-            label_visibility="collapsed",
-        )
+        
         st.markdown('<label class="required-label">Mode</label>', unsafe_allow_html=True)
         mode = st.radio("", ["In-Person", "Online"], key="mode", label_visibility="collapsed")
 
@@ -1152,8 +1166,6 @@ def render_register():
             missing.append("Enrollment Type")
         if not class_type or not class_type.strip():
             missing.append("Class Type")
-        if not location_pref or not location_pref.strip():
-            missing.append("Prefered Location")
         if not mode:
             missing.append("Mode")
         if not level or not level.strip():
@@ -1216,7 +1228,6 @@ def render_register():
                 "address": address,
                 "enrollment": enrollment,
                 "class_type": class_type,
-                "location_pref": location_pref,
                 "mode": mode,
                 "workshops": "; ".join(workshops),
                 "level": level,
