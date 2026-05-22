@@ -565,7 +565,7 @@ def render_early_banner():
         st.markdown(
             f"""
             <div class="early-banner" style="max-width:980px; margin:10px auto 16px auto; text-align:center; border:1px solid {GOLD}; background:transparent; color:{GOLD_SOFT}; padding:8px 16px; border-radius:999px;">
-              Enrollment: <b>${pricing['enrollment']}</b>/month · 4 classes: <b>${pricing['four']}</b> · 8 classes: <b>${pricing['eight']}</b>
+              Enrollment: <b>${pricing['enrollment']}</b>/month · 4 classes: <b>${pricing['four']}</b> · 8 classes: <b>${pricing['eight']}</b>· Siblings offer: <b>$10</b>
             </div>
             """,
             unsafe_allow_html=True,
@@ -973,6 +973,7 @@ def render_register():
         "signature": "_req_signature",
         "class_type": "_req_classtype",
         "location_pref": "_req_location",
+        "parent": "parent"
         "phone": "phone",
         "email": "email",
     }
@@ -1090,7 +1091,7 @@ def render_register():
             unsafe_allow_html=True,
         )
 
-        st.markdown('<label>Parent/Guardian Name</label>', unsafe_allow_html=True)
+        st.markdown('<label class="required-label">Parent/Guardian Name</label>', unsafe_allow_html=True)
         parent = st.text_input("", key="parent", label_visibility="collapsed")
 
         st.markdown('<label class="required-label">Phone Number</label>', unsafe_allow_html=True)
@@ -1188,6 +1189,9 @@ def render_register():
         if not pref_time or not pref_time.strip():
             missing.append("Preferred Days/Time")
             missing_placeholders.append(required_placeholders["pref_time"])
+        if not parent or not parent.strip():
+            missing.append("Parent/Guardian Name")
+            missing_placeholders.append(required_placeholders["parent"])
         if not phone or not phone.strip():
             missing.append("Phone Number")
             missing_placeholders.append(required_placeholders["phone"])
