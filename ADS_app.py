@@ -1030,8 +1030,8 @@ def render_register():
             [
                 "",
                 f"Siblings Price (${enroll_price-10}/month)",
-                f"4 Classes (${pricing['four']})",
-                f"8 Classes (${eight_price})",
+                f"4 Classes (${pricing['four']}/month)",
+                f"8 Classes (${eight_price}/month)",
                 "Drop-in ($15/session)",
             ],
             key="enroll",
