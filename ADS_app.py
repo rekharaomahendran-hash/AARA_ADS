@@ -469,34 +469,6 @@ def get_registration_count():
             return 0
     return 0
 
-# ---------------------------------------------------------
-# SCHEMA MIGRATION (B10)
-# Ensures CSV always matches the current form fields
-# ---------------------------------------------------------
-def migrate_csv_schema(csv_path: str, required_columns: list):
-    # If file does not exist, create it with correct header
-    if not os.path.exists(csv_path):
-        pd.DataFrame(columns=required_columns).to_csv(csv_path, index=False)
-        return
-
-    try:
-        df = pd.read_csv(csv_path)
-    except Exception:
-        # If unreadable, recreate clean file
-        pd.DataFrame(columns=required_columns).to_csv(csv_path, index=False)
-        return
-
-    # Add missing columns
-    for col in required_columns:
-        if col not in df.columns:
-            df[col] = ""
-
-    # Remove extra columns (optional — keeps CSV clean)
-    df = df[required_columns]
-
-    # Save updated schema
-    df.to_csv(csv_path, index=False)
-
 
 def is_early_bird_active():
     return get_registration_count() < 10
@@ -519,41 +491,6 @@ def get_pricing():
 
 
 log_visit()
-
-# ---------------------------------------------------------
-# MIGRATE REGISTRATION CSV SCHEMA
-# ---------------------------------------------------------
-REG_COLUMNS = [
-    "timestamp",
-    "student_name",
-    "dob",
-    "gender",
-    "school",
-    "parent",
-    "phone",
-    "email",
-    "address",
-    "enrollment",
-    "class_type",
-    "location_pref",
-    "mode",
-    "workshops",
-    "level",
-    "style",
-    "pref_time",
-    "experience",
-    "em_name",
-    "em_rel",
-    "em_phone",
-    "medical",
-    "consent",
-    "signature",
-    "sig_date"
-]
-
-migrate_csv_schema(REG_FILE, REG_COLUMNS)
-
-
 
 # Helper: convert image file to base64 string
 def _img_to_base64(path):
@@ -825,6 +762,31 @@ def render_classes():
         '<div style="text-align:center; margin-top:10px;"><a class="btn-primary" href="/?page=Register">Register Now</a></div>',
         unsafe_allow_html=True,
     )
+    # Address card under Register Now (paste after the Register CTA)
+    studio_address = "AARA Dance Studio, Fate, Rockwall, Dallas, TX"
+    google_short_link = "https://maps.app.goo.gl/6SFoVDtau8oQULao9?g_st=ic"
+    # Apple Maps fallback using the address (URL-encoded)
+    import urllib.parse
+    apple_maps_link = f"https://maps.apple.com/?q={urllib.parse.quote(studio_address)}"
+    
+    st.markdown(
+        f"""
+        <div class="classes-address-row">
+          <div class="address-card">
+            <div class="title">Visit Us</div>
+            <div style="color:#f5e8c7; line-height:1.4;">{studio_address}</div>
+            <div style="margin-top:10px;" class="address-links">
+              <a href="{google_short_link}" target="_blank" rel="noopener">Open in Google Maps</a>
+              <a href="{apple_maps_link}" target="_blank" rel="noopener">Open in Apple Maps</a>
+            </div>
+            <div style="margin-top:8px; color:#9ca3af; font-size:0.85rem;">
+              Parking available · Please arrive 10 minutes early
+            </div>
+          </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
     st.markdown('</div>', unsafe_allow_html=True)
 
@@ -1010,7 +972,6 @@ def render_register():
         "pref_time": "_req_pref_time",
         "signature": "_req_signature",
         "class_type": "_req_classtype",
-        "location_pref": "_req_location",
     }
 
     # The form (submit button must be inside the form)
@@ -1078,23 +1039,13 @@ def render_register():
             [
                 "",
                 f"Tiny Stars(Age 5-8)",
-                f"Shining Stars(Age 9+)",
+                f"Shiny Stars(Age 9+)",
                 "Dream Chasers(Ladies 19+)",
             ],
             key="class",
             label_visibility="collapsed",
         )
-        st.markdown('<label class="required-label">Preferred Location</label>', unsafe_allow_html=True)
-        location_pref = st.selectbox(
-            "",
-            [
-                "",
-                f"Rockwall/Fate TX",
-                "Frisco, TX",
-            ],
-            key="location",
-            label_visibility="collapsed",
-        )
+        
         st.markdown('<label class="required-label">Mode</label>', unsafe_allow_html=True)
         mode = st.radio("", ["In-Person", "Online"], key="mode", label_visibility="collapsed")
 
@@ -1215,8 +1166,6 @@ def render_register():
             missing.append("Enrollment Type")
         if not class_type or not class_type.strip():
             missing.append("Class Type")
-        if not location_pref or not location_pref.strip():
-            missing.append("Prefered Location")
         if not mode:
             missing.append("Mode")
         if not level or not level.strip():
@@ -1279,7 +1228,6 @@ def render_register():
                 "address": address,
                 "enrollment": enrollment,
                 "class_type": class_type,
-                "location_pref": location_pref,
                 "mode": mode,
                 "workshops": "; ".join(workshops),
                 "level": level,
@@ -1295,21 +1243,9 @@ def render_register():
                 "signature": signature,
                 "sig_date": sig_date.isoformat(),
             }
-            #save_registration(record)
-            #st.success("Registration submitted successfully!")
             save_registration(record)
-            try:
-                notify_admin_email(record)
-            except Exception as e:
-                st.warning(f"Email notify failed: {e}")
-            
-            try:
-                notify_admin_whatsapp(record)
-            except Exception as e:
-                st.warning(f"WhatsApp notify failed: {e}")
-            
             st.success("Registration submitted successfully!")
-            
+
     st.markdown('</div>', unsafe_allow_html=True)
 
 # PAGE ROUTER
