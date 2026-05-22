@@ -469,34 +469,6 @@ def get_registration_count():
             return 0
     return 0
 
-# ---------------------------------------------------------
-# SCHEMA MIGRATION (B10)
-# Ensures CSV always matches the current form fields
-# ---------------------------------------------------------
-def migrate_csv_schema(csv_path: str, required_columns: list):
-    # If file does not exist, create it with correct header
-    if not os.path.exists(csv_path):
-        pd.DataFrame(columns=required_columns).to_csv(csv_path, index=False)
-        return
-
-    try:
-        df = pd.read_csv(csv_path)
-    except Exception:
-        # If unreadable, recreate clean file
-        pd.DataFrame(columns=required_columns).to_csv(csv_path, index=False)
-        return
-
-    # Add missing columns
-    for col in required_columns:
-        if col not in df.columns:
-            df[col] = ""
-
-    # Remove extra columns (optional — keeps CSV clean)
-    df = df[required_columns]
-
-    # Save updated schema
-    df.to_csv(csv_path, index=False)
-
 
 def is_early_bird_active():
     return get_registration_count() < 10
@@ -519,41 +491,6 @@ def get_pricing():
 
 
 log_visit()
-
-# ---------------------------------------------------------
-# MIGRATE REGISTRATION CSV SCHEMA
-# ---------------------------------------------------------
-REG_COLUMNS = [
-    "timestamp",
-    "student_name",
-    "dob",
-    "gender",
-    "school",
-    "parent",
-    "phone",
-    "email",
-    "address",
-    "enrollment",
-    "class_type",
-    "location_pref",
-    "mode",
-    "workshops",
-    "level",
-    "style",
-    "pref_time",
-    "experience",
-    "em_name",
-    "em_rel",
-    "em_phone",
-    "medical",
-    "consent",
-    "signature",
-    "sig_date"
-]
-
-migrate_csv_schema(REG_FILE, REG_COLUMNS)
-
-
 
 # Helper: convert image file to base64 string
 def _img_to_base64(path):
@@ -825,7 +762,6 @@ def render_classes():
         '<div style="text-align:center; margin-top:10px;"><a class="btn-primary" href="/?page=Register">Register Now</a></div>',
         unsafe_allow_html=True,
     )
-    
     # Address card under Register Now (paste after the Register CTA)
     studio_address = "AARA Dance Studio, Fate, Rockwall, Dallas, TX"
     google_short_link = "https://maps.app.goo.gl/6SFoVDtau8oQULao9?g_st=ic"
@@ -1320,21 +1256,9 @@ def render_register():
                 "signature": signature,
                 "sig_date": sig_date.isoformat(),
             }
-            #save_registration(record)
-            #st.success("Registration submitted successfully!")
             save_registration(record)
-            try:
-                notify_admin_email(record)
-            except Exception as e:
-                st.warning(f"Email notify failed: {e}")
-            
-            try:
-                notify_admin_whatsapp(record)
-            except Exception as e:
-                st.warning(f"WhatsApp notify failed: {e}")
-            
             st.success("Registration submitted successfully!")
-            
+
     st.markdown('</div>', unsafe_allow_html=True)
 
 # PAGE ROUTER
