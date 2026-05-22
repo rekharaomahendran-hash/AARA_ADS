@@ -973,6 +973,8 @@ def render_register():
         "signature": "_req_signature",
         "class_type": "_req_classtype",
         "location_pref": "_req_location",
+        "phone": "phone",
+        "email": "email",
     }
 
     # The form (submit button must be inside the form)
@@ -1091,10 +1093,10 @@ def render_register():
         st.markdown('<label>Parent/Guardian Name</label>', unsafe_allow_html=True)
         parent = st.text_input("", key="parent", label_visibility="collapsed")
 
-        st.markdown('<label>Phone Number</label>', unsafe_allow_html=True)
+        st.markdown('<label class="required-label">Phone Number</label>', unsafe_allow_html=True)
         phone = st.text_input("", key="phone", label_visibility="collapsed")
 
-        st.markdown('<label>Email Address</label>', unsafe_allow_html=True)
+        st.markdown('<label class="required-label">Email Address</label>', unsafe_allow_html=True)
         email = st.text_input("", key="email", label_visibility="collapsed")
 
         st.markdown('<label>Address</label>', unsafe_allow_html=True)
@@ -1186,6 +1188,12 @@ def render_register():
         if not pref_time or not pref_time.strip():
             missing.append("Preferred Days/Time")
             missing_placeholders.append(required_placeholders["pref_time"])
+        if not phone or not phone.strip():
+            missing.append("Phone Number")
+            missing_placeholders.append(required_placeholders["phone"])
+        if not email or not email.strip():
+            missing.append("Email ID")
+            missing_placeholders.append(required_placeholders["email"])
         if not consent or not consent.strip():
             missing.append("Media Consent")
         # Terms checkbox required
