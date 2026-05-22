@@ -762,31 +762,7 @@ def render_classes():
         '<div style="text-align:center; margin-top:10px;"><a class="btn-primary" href="/?page=Register">Register Now</a></div>',
         unsafe_allow_html=True,
     )
-    # Address card under Register Now (paste after the Register CTA)
-    studio_address = "AARA Dance Studio, Fate, Rockwall, Dallas, TX"
-    google_short_link = "https://maps.app.goo.gl/6SFoVDtau8oQULao9?g_st=ic"
-    # Apple Maps fallback using the address (URL-encoded)
-    import urllib.parse
-    apple_maps_link = f"https://maps.apple.com/?q={urllib.parse.quote(studio_address)}"
-    
-    st.markdown(
-        f"""
-        <div class="classes-address-row">
-          <div class="address-card">
-            <div class="title">Visit Us</div>
-            <div style="color:#f5e8c7; line-height:1.4;">{studio_address}</div>
-            <div style="margin-top:10px;" class="address-links">
-              <a href="{google_short_link}" target="_blank" rel="noopener">Open in Google Maps</a>
-              <a href="{apple_maps_link}" target="_blank" rel="noopener">Open in Apple Maps</a>
-            </div>
-            <div style="margin-top:8px; color:#9ca3af; font-size:0.85rem;">
-              Parking available · Please arrive 10 minutes early
-            </div>
-          </div>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
+
     st.markdown('</div>', unsafe_allow_html=True)
 
 # ABOUT PAGE
