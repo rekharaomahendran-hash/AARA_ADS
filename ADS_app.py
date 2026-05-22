@@ -973,7 +973,7 @@ def render_register():
         "signature": "_req_signature",
         "class_type": "_req_classtype",
         "location_pref": "_req_location",
-        "parent": "parent"
+        "parent": "parent",
         "phone": "phone",
         "email": "email",
     }
