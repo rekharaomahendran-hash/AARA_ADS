@@ -471,7 +471,7 @@ def get_registration_count():
 
 
 def is_early_bird_active():
-    return get_registration_count() < 1
+    return get_registration_count() < 0
 
 
 def get_pricing():
