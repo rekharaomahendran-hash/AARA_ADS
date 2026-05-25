@@ -43,7 +43,7 @@ st.set_page_config(
 )
 
 # DATA PATHS
-DATA_DIR = "data"
+DATA_DIR = "data1"
 os.makedirs(DATA_DIR, exist_ok=True)
 REG_FILE = os.path.join(DATA_DIR, "registrations.csv")
 VISIT_FILE = os.path.join(DATA_DIR, "site_visits.csv")
