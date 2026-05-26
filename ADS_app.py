@@ -267,11 +267,11 @@ html, body, [data-testid="stAppViewContainer"] {{
 /* --- MOBILE (VERTICAL) FIX --- */
 @media (max-width: 480px) {{
   .whatsapp-btn {{
-    top: 70px;   /* moved DOWN to avoid Streamlit banner */
+    top: 30px;   /* moved DOWN to avoid Streamlit banner */
     right: 15px;
   }}
   .instagram-btn {{
-    top: 7px;   /* same vertical alignment */
+    top: 30px;   /* same vertical alignment */
     right: 85px;  /* still left of WhatsApp */
   }}
 }}
