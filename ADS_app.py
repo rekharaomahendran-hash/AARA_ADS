@@ -1,3 +1,5 @@
+
+
 # ADS_app.py - C03.5 (updated: equal-height class cards)
 # Baseline: C03/C04 (your chosen baseline)
 # This variant:
@@ -824,9 +826,9 @@ def render_about():
 # ADMIN PAGE
 def render_admin():
     st.markdown('<div class="section">', unsafe_allow_html=True)
-        st.markdown('<div class="title">Admin Dashboard</div>', unsafe_allow_html=True)
+    st.markdown('<div class="title">Admin Dashboard</div>', unsafe_allow_html=True)
 
-        ADMIN_PASS = os.environ.get("ADMIN_PASS", "aara-admin-2026")
+    ADMIN_PASS = os.environ.get("ADMIN_PASS", "aara-admin-2026")
 
     if not st.session_state.admin_authenticated:
         pwd = st.text_input("Enter admin password", type="password")
