@@ -1051,6 +1051,48 @@ def render_admin():
         if st.button("Logout"):
             st.session_state.admin_authenticated = False
             st.rerun()
+        # -------------------------------
+        # Admin: Download + Upload/Restore
+        # -------------------------------
+        st.markdown("### Backup / Restore Registrations")
+        
+        # Download current runtime CSV
+        if os.path.exists(REG_FILE):
+            with open(REG_FILE, "rb") as f:
+                st.download_button(
+                    "⬇️ Download current registrations.csv",
+                    f,
+                    file_name="registrations.csv",
+                    mime="text/csv"
+                )
+        
+        # Upload a CSV to restore
+        uploaded = st.file_uploader(
+            "⬆️ Upload a registrations.csv file to restore",
+            type=["csv"],
+            key="admin_upload_restore"
+        )
+        
+        if uploaded is not None:
+            try:
+                df_uploaded = pd.read_csv(uploaded)
+        
+                # Ensure all expected columns exist
+                for col in REG_HEADERS:
+                    if col not in df_uploaded.columns:
+                        df_uploaded[col] = ""
+        
+                # Reorder columns
+                df_uploaded = df_uploaded[REG_HEADERS]
+        
+                # Save safely
+                safe_write_csv(df_uploaded, REG_FILE)
+        
+                st.success("Registrations restored successfully from uploaded file.")
+                safe_rerun()
+        
+            except Exception as e:
+                st.error(f"Failed to restore file: {e}")
 
     st.markdown('</div>', unsafe_allow_html=True)
 
