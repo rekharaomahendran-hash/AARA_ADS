@@ -272,7 +272,7 @@ html, body, [data-testid="stAppViewContainer"] {{
   }}
   .instagram-btn {{
     top: 40px;   /* same vertical alignment */
-    right: 85px;  /* still left of WhatsApp */
+    right: 75px;  /* still left of WhatsApp */
   }}
 }}
 
