@@ -53,7 +53,7 @@ def safe_rerun():
 
 # ensure_reg_file(REG_FILE, REG_HEADERS)
 
-timestamp,student_name,dob,gender,school,parent,phone,email,address,enrollment,class_type,location_pref,mode,workshops,level,style,pref_time,experience,em_name,em_rel,em_phone,medical,consent,agreed_terms,signature,sig_date,_label
+#timestamp,student_name,dob,gender,school,parent,phone,email,address,enrollment,class_type,location_pref,mode,workshops,level,style,pref_time,experience,em_name,em_rel,em_phone,medical,consent,agreed_terms,signature,sig_date,_label
 # -----------------------------
 # 1. Correct GitHub repo paths
 # -----------------------------
