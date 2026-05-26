@@ -15,10 +15,6 @@ import json
 import base64
 from datetime import datetime, date
 
-st.markdown("""
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-""", unsafe_allow_html=True)
-
 # Robust rerun helper (place after imports)
 def safe_rerun():
     try:
@@ -164,6 +160,11 @@ RED = "#8b0000"
 TEXT = "#f5e8c7"
 CARD_BG = "#111111"
 BORDER = "#3a3a3a"
+
+
+st.markdown("""
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+""", unsafe_allow_html=True)
 
 # CSS: C02 global CSS (form fixes) + slideshow CSS (working engine) + logo centering override + button overrides
 # Added .class-grid for 3-column responsive layout and equal-height card rules
