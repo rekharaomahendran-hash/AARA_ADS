@@ -842,7 +842,7 @@ def render_admin():
         st.success("Admin authenticated.")
 
         # --- Debug: show runtime file info for registrations ---
-        import os, time
+        #import os, time
         st.markdown("**Debug file info**")
         st.write("REG_FILE:", REG_FILE)
         st.write("Absolute path:", os.path.abspath(REG_FILE))
