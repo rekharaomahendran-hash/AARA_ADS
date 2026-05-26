@@ -241,6 +241,21 @@ html, body, [data-testid="stAppViewContainer"] {{
   z-index: 9999;
 }}
 
+.instagram-float {{
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    bottom: 90px; /* slightly above WhatsApp */
+    right: 20px;
+    background-color: #E1306C;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 28px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+}}
+
 .bottom-nav {{
   position: fixed;
   bottom: 0;
@@ -674,6 +689,12 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+
+st.markdown("""
+<a href="https://www.instagram.com/reel/DYjC8gHtVBT/?igsh=NmJnNGR5Z3BlNHd3" class="instagram-float" target="_blank">
+    <i class="fa fa-instagram"></i>
+</a>
+""", unsafe_allow_html=True)
 
 # QR CODE SECTION
 def render_qr_section():
