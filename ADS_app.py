@@ -841,6 +841,17 @@ def render_admin():
     else:
         st.success("Admin authenticated.")
 
+        # --- Debug: show runtime file info for registrations ---
+        import os, time
+        st.markdown("**Debug file info**")
+        st.write("REG_FILE:", REG_FILE)
+        st.write("Absolute path:", os.path.abspath(REG_FILE))
+        st.write("Exists:", os.path.exists(REG_FILE))
+        if os.path.exists(REG_FILE):
+            st.write("Size bytes:", os.path.getsize(REG_FILE))
+            st.write("Last modified:", time.ctime(os.path.getmtime(REG_FILE)))
+        st.write("Files in data dir:", os.listdir(os.path.dirname(os.path.abspath(REG_FILE))))
+
         # --- Admin: editable registrations table with delete capability ---
         regs = read_csv(REG_FILE)
         
