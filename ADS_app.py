@@ -10,6 +10,7 @@
 import streamlit as st
 import pandas as pd
 import os
+import time
 import json
 import base64
 from datetime import datetime, date
@@ -47,7 +48,8 @@ st.set_page_config(
 # DATA PATHS
 DATA_DIR = "data1"
 os.makedirs(DATA_DIR, exist_ok=True)
-REG_FILE = os.path.join(DATA_DIR, "registrations.csv")
+#REG_FILE = os.path.join(DATA_DIR, "registrations.csv")
+REG_FILE = os.path.join(os.path.dirname(__file__), "data", "registrations.csv")
 VISIT_FILE = os.path.join(DATA_DIR, "site_visits.csv")
 LOGO_PATH = "logo.png"
 
