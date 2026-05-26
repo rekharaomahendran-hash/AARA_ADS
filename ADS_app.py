@@ -713,9 +713,11 @@ st.markdown(
 )
 
 st.markdown("""
-<a href="https://www.instagram.com/reel/DYjC8gHtVBT/?igsh=NmJnNGR5Z3BlNHd3" target="_blank" class="instagram-float">
-    <img class="instagram-icon" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
-</a>
+<div class="instagram-btn">
+    <a href="https://www.instagram.com/reel/DYjC8gHtVBT/?igsh=NmJnNGR5Z3BlNHd3" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
+    </a>
+</div>
 """, unsafe_allow_html=True)
 
 # QR CODE SECTION
