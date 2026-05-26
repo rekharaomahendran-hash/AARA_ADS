@@ -229,7 +229,7 @@ html, body, [data-testid="stAppViewContainer"] {{
 /* --- DESKTOP / LARGE SCREENS --- */
 .whatsapp-btn {{
   position: fixed;
-  top: 30px;
+  top: 70px;
   right: 20px;
   width: 55px;
   height: 55px;
@@ -246,7 +246,7 @@ html, body, [data-testid="stAppViewContainer"] {{
 .instagram-btn {{
   position: fixed;
   top: 30px;
-  right: 90px; /* left of WhatsApp */
+  right: 70px; /* left of WhatsApp */
   width: 55px;
   height: 55px;
   background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
@@ -267,11 +267,11 @@ html, body, [data-testid="stAppViewContainer"] {{
 /* --- MOBILE (VERTICAL) FIX --- */
 @media (max-width: 480px) {{
   .whatsapp-btn {{
-    top: 110px;   /* moved DOWN to avoid Streamlit banner */
+    top: 70px;   /* moved DOWN to avoid Streamlit banner */
     right: 15px;
   }}
   .instagram-btn {{
-    top: 110px;   /* same vertical alignment */
+    top: 7px;   /* same vertical alignment */
     right: 85px;  /* still left of WhatsApp */
   }}
 }}
