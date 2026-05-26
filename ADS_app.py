@@ -246,7 +246,7 @@ html, body, [data-testid="stAppViewContainer"] {{
 .instagram-btn {{
   position: fixed;
   top: 70px;
-  right: 90px; /* 70px + 55px button width */
+  right: 90px; /* 55px left of WhatsApp */
   width: 55px;
   height: 55px;
   background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
@@ -257,11 +257,25 @@ html, body, [data-testid="stAppViewContainer"] {{
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   z-index: 9999;
 }}
+
+/* Instagram icon inside the circle */
 .instagram-btn img {{
   width: 28px;
   height: 28px;
+  object-fit: contain;
 }}
 
+/* Mobile responsive */
+@media (max-width: 480px) {{
+  .whatsapp-btn {{
+    top: 20px;
+    right: 15px;
+  }}
+  .instagram-btn {{
+    top: 20px;
+    right: 80px; /* still left of WhatsApp */
+  }}
+}}
 
 .bottom-nav {{
   position: fixed;
