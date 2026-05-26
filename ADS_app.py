@@ -1198,7 +1198,8 @@ def render_register():
             [
                 "",
                 f"Rockwall/Fate TX",
-                "Frisco, TX",
+                f"Frisco, TX",
+                "Plano/Wylie TX",
             ],
             key="location",
             label_visibility="collapsed",
