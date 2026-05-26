@@ -229,8 +229,10 @@ html, body, [data-testid="stAppViewContainer"] {{
 /* --- DESKTOP / LARGE SCREENS --- */
 .whatsapp-btn {{
   position: fixed;
-  top: 70px;
+  top: 50px;
   right: 20px;
+  width: 55px;
+  height: 55px;
   background: #25D366;
   color: white;
   padding: 14px 16px;
@@ -243,7 +245,7 @@ html, body, [data-testid="stAppViewContainer"] {{
 
 .instagram-btn {{
   position: fixed;
-  top: 70px;
+  top: 50px;
   right: 90px; /* left of WhatsApp */
   width: 55px;
   height: 55px;
