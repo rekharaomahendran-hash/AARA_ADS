@@ -1208,7 +1208,7 @@ def render_register():
         mode = st.radio("", ["In-Person", "Online"], key="mode", label_visibility="collapsed")
 
         st.markdown('<label>Workshops</label>', unsafe_allow_html=True)
-        workshops = st.multiselect("", ["Ladies Kuthu Workshop", "Couple Dance Fitness Workshop"], key="workshops", label_visibility="collapsed")
+        workshops = st.multiselect("", ["Women’s Folk Funk Workshop", "Fit & Flow Couples Edition"], key="workshops", label_visibility="collapsed")
 
         st.markdown('<label class="required-label">Level</label>', unsafe_allow_html=True)
         level = st.selectbox("", ["", "Beginner", "Intermediate", "Advanced"], key="level", label_visibility="collapsed")
