@@ -242,20 +242,23 @@ html, body, [data-testid="stAppViewContainer"] {{
   z-index: 9999;
 }}
 
-/* Instagram button LEFT of WhatsApp */
 .instagram-btn {{
-  position: fixed;
-  top: 70px;
-  right: 90px; /* 55px left of WhatsApp */
-  width: 55px;
-  height: 55px;
-  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  z-index: 9999;
+    position: fixed;
+    top: 70px;
+    right: 90px; /* 55px left of WhatsApp */
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 9999;
+}}
+.instagram-icon {{
+    width: 28px;
+    height: 28px;
 }}
 
 /* Instagram icon inside the circle */
