@@ -824,9 +824,20 @@ def render_about():
 # ADMIN PAGE
 def render_admin():
     st.markdown('<div class="section">', unsafe_allow_html=True)
-    st.markdown('<div class="title">Admin Dashboard</div>', unsafe_allow_html=True)
-
-    ADMIN_PASS = os.environ.get("ADMIN_PASS", "aara-admin-2026")
+        st.markdown('<div class="title">Admin Dashboard</div>', unsafe_allow_html=True)
+    import os, time
+    st.markdown("**Debug file info**", unsafe_allow_html=True)
+    st.write("REG_FILE variable:", REG_FILE)
+    if os.path.exists(REG_FILE):
+        st.write("Absolute path:", os.path.abspath(REG_FILE))
+        st.write("Size bytes:", os.path.getsize(REG_FILE))
+        st.write("Last modified:", time.ctime(os.path.getmtime(REG_FILE)))
+    else:
+        st.write("File not found at", os.path.abspath(REG_FILE))
+    # list files in data folder
+    st.write("Files in data folder:", os.listdir(os.path.dirname(os.path.abspath(REG_FILE))))
+    
+        ADMIN_PASS = os.environ.get("ADMIN_PASS", "aara-admin-2026")
 
     if not st.session_state.admin_authenticated:
         pwd = st.text_input("Enter admin password", type="password")
