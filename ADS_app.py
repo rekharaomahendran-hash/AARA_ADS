@@ -162,10 +162,6 @@ CARD_BG = "#111111"
 BORDER = "#3a3a3a"
 
 
-st.markdown("""
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-""", unsafe_allow_html=True)
-
 # CSS: C02 global CSS (form fixes) + slideshow CSS (working engine) + logo centering override + button overrides
 # Added .class-grid for 3-column responsive layout and equal-height card rules
 CSS = f"""
@@ -250,15 +246,19 @@ html, body, [data-testid="stAppViewContainer"] {{
     position: fixed;
     width: 55px;
     height: 55px;
-    bottom: 90px; /* slightly above WhatsApp */
+    bottom: 90px; /* above WhatsApp */
     right: 20px;
-    background-color: #E1306C;
-    color: white;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 28px;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 1000;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+    z-index: 9999;
+}}
+.gram-icon {{
+    width: 28px;
+    height: 28px;
 }}
 
 .bottom-nav {{
@@ -696,8 +696,8 @@ st.markdown(
 )
 
 st.markdown("""
-<a href="https://www.instagram.com/reel/DYjC8gHtVBT/?igsh=NmJnNGR5Z3BlNHd3" class="instagram-float" target="_blank">
-    <i class="fa fa-instagram"></i>
+<a href="https://www.instagram.com/reel/DYjC8gHtVBT/?igsh=NmJnNGR5Z3BlNHd3" target="_blank" class="instagram-float">
+    <img class="instagram-icon" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
 </a>
 """, unsafe_allow_html=True)
 
