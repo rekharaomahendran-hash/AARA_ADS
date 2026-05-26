@@ -262,17 +262,6 @@ html, body, [data-testid="stAppViewContainer"] {{
   height: 28px;
 }}
 
-/* Mobile responsive adjustments */
-@media (max-width: 480px) {{
-  .whatsapp-btn {{
-    top: 20px;
-    right: 15px;
-  }}
-  .instagram-btn {{
-    top: 20px;
-    right: 80px; /* still left of WhatsApp */
-  }}
-}}
 
 .bottom-nav {{
   position: fixed;
