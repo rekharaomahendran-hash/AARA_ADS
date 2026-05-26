@@ -30,7 +30,93 @@ def safe_rerun():
             st.session_state._force_refresh = not st.session_state.get("_force_refresh", False)
             st.stop()
 
+# def ensure_reg_file(path):
+#     folder = os.path.dirname(path)
+#     os.makedirs(folder, exist_ok=True)
 
+#     if not os.path.exists(path) or os.path.getsize(path) == 0:
+#         with open(path, "w") as f:
+#             f.write("timestamp,student_name,dob,gender,school,parent,phone,email,address,enrollment,class_type,location_pref,mode,workshops,level,style,pref_time,experience,em_name,em_rel,em_phone,medical,consent,agreed_terms,signature,sig_date,_label\n")
+
+# ensure_reg_file(REG_FILE)
+
+# def safe_write_csv(df, path):
+#     tmp = path + ".tmp"
+#     df.to_csv(tmp, index=False)
+#     os.replace(tmp, path)
+
+
+# def ensure_reg_file(path, headers):
+#     os.makedirs(os.path.dirname(path), exist_ok=True)
+#     if not os.path.exists(path) or os.path.getsize(path) == 0:
+#         pd.DataFrame(columns=headers).to_csv(path, index=False)
+
+# ensure_reg_file(REG_FILE, REG_HEADERS)
+
+timestamp,student_name,dob,gender,school,parent,phone,email,address,enrollment,class_type,location_pref,mode,workshops,level,style,pref_time,experience,em_name,em_rel,em_phone,medical,consent,agreed_terms,signature,sig_date,_label
+# -----------------------------
+# 1. Correct GitHub repo paths
+# -----------------------------
+DATA_DIR = os.path.join(os.path.dirname(__file__), "data1")
+REG_FILE = os.path.join(DATA_DIR, "registrations.csv")
+VISIT_FILE = os.path.join(DATA_DIR, "site_visits.csv")
+
+# -----------------------------------------
+# 2. Ensure folder + CSV exist with header
+# -----------------------------------------
+REG_HEADERS = [
+"timestamp","student_name","dob","gender","school","parent","phone","email","address","enrollment","class_type","location_pref","mode","workshops","level","style","pref_time","experience","em_name","em_rel","em_phone","medical","consent","agreed_terms","signature","sig_date","_label"
+]
+
+
+# -----------------------------------------
+# 3. Safe CSV reader (no parser errors)
+# -----------------------------------------
+def read_csv(path):
+    if not os.path.exists(path) or os.path.getsize(path) == 0:
+        return pd.DataFrame(columns=REG_HEADERS)
+
+    try:
+        return pd.read_csv(path)
+    except Exception:
+        # fallback parser
+        try:
+            return pd.read_csv(path, engine="python", on_bad_lines="skip")
+        except Exception:
+            return pd.DataFrame(columns=REG_HEADERS)
+
+# -----------------------------------------
+# 4. Atomic safe writer (no corruption)
+# -----------------------------------------
+def safe_write_csv(df, path):
+    tmp = path + ".tmp"
+    df.to_csv(tmp, index=False)
+    os.replace(tmp, path)
+
+# -----------------------------------------
+# 5. Append registration safely
+# -----------------------------------------
+def save_registration(record):
+    df_new = pd.DataFrame([record])
+
+    if os.path.exists(REG_FILE):
+        df_old = read_csv(REG_FILE)
+
+        # ensure all columns exist
+        for col in df_old.columns:
+            if col not in df_new.columns:
+                df_new[col] = ""
+
+        for col in df_new.columns:
+            if col not in df_old.columns:
+                df_old[col] = ""
+
+        df_final = pd.concat([df_old, df_new], ignore_index=True)
+    else:
+        df_final = df_new
+
+    safe_write_csv(df_final, REG_FILE)
+    
 # Optional QR code support
 try:
     import qrcode
@@ -46,11 +132,11 @@ st.set_page_config(
 )
 
 # DATA PATHS
-DATA_DIR = "data1"
+#DATA_DIR = "data1"
 os.makedirs(DATA_DIR, exist_ok=True)
 #REG_FILE = os.path.join(DATA_DIR, "registrations.csv")
-REG_FILE = os.path.join(os.path.dirname(__file__), "data1", "registrations.csv")
-VISIT_FILE = os.path.join(DATA_DIR, "site_visits.csv")
+#REG_FILE = os.path.join(os.path.dirname(__file__), "data1", "registrations.csv")
+#VISIT_FILE = os.path.join(DATA_DIR, "site_visits.csv")
 LOGO_PATH = "logo.png"
 
 # SESSION STATE defaults
