@@ -1,5 +1,3 @@
-
-
 # ADS_app.py - C03.5 (updated: equal-height class cards)
 # Baseline: C03/C04 (your chosen baseline)
 # This variant:
@@ -228,7 +226,7 @@ html, body, [data-testid="stAppViewContainer"] {{
   background: {GOLD_SOFT};
 }}
 
-/* --- WhatsApp Button (your original, untouched) --- */
+/* --- DESKTOP / LARGE SCREENS --- */
 .whatsapp-btn {{
   position: fixed;
   top: 70px;
@@ -243,11 +241,10 @@ html, body, [data-testid="stAppViewContainer"] {{
   z-index: 9999;
 }}
 
-/* --- Instagram Button (left of WhatsApp) --- */
 .instagram-btn {{
   position: fixed;
   top: 70px;
-  right: 90px; /* 55px left of WhatsApp */
+  right: 90px; /* left of WhatsApp */
   width: 55px;
   height: 55px;
   background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
@@ -259,22 +256,33 @@ html, body, [data-testid="stAppViewContainer"] {{
   z-index: 9999;
 }}
 
-/* Instagram icon inside circle */
 .instagram-btn img {{
   width: 28px;
   height: 28px;
   object-fit: contain;
 }}
 
-/* --- Mobile Responsive --- */
+/* --- MOBILE (VERTICAL) FIX --- */
 @media (max-width: 480px) {{
   .whatsapp-btn {{
-    top: 20px;
+    top: 110px;   /* moved DOWN to avoid Streamlit banner */
     right: 15px;
   }}
   .instagram-btn {{
-    top: 20px;
-    right: 80px; /* still left of WhatsApp */
+    top: 110px;   /* same vertical alignment */
+    right: 85px;  /* still left of WhatsApp */
+  }}
+}}
+
+/* --- MOBILE (HORIZONTAL / LANDSCAPE) FIX --- */
+@media (max-height: 480px) {{
+  .whatsapp-btn {{
+    top: 60px;
+    right: 15px;
+  }}
+  .instagram-btn {{
+    top: 60px;
+    right: 85px;
   }}
 }}
 
