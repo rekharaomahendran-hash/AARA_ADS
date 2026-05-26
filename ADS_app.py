@@ -15,6 +15,10 @@ import json
 import base64
 from datetime import datetime, date
 
+st.markdown("""
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+""", unsafe_allow_html=True)
+
 # Robust rerun helper (place after imports)
 def safe_rerun():
     try:
