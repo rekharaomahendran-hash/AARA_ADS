@@ -233,24 +233,29 @@ html, body, [data-testid="stAppViewContainer"] {{
   right: 20px;
   width: 55px;
   height: 55px;
-  background: #25D366;
-  color: white;
-  padding: 14px 16px;
-  border-radius: 50%;
-  font-size: 22px;
-  text-decoration: none;
+  background-color:#25D366;
+  border-radius: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   z-index: 9999;
 }}
 
+.whatsapp-btn img {{
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}}
+
 .instagram-btn {{
   position: fixed;
-  top: 30px;
+  top: 70px;
   right: 70px; /* left of WhatsApp */
   width: 55px;
   height: 55px;
   background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-  border-radius: 50%;
+  border-radius: 20%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -713,14 +718,13 @@ render_header()
 render_early_banner()
 
 # WHATSAPP BUTTON (Top Right)
-st.markdown(
-    """
-    <a class="whatsapp-btn" href="https://wa.me/16318367972" target="_blank">
-      💬
+st.markdown("""
+<div class="whatsapp-btn">
+    <a href="https://wa.me/14692002020" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
     </a>
-    """,
-    unsafe_allow_html=True,
-)
+</div>
+""",unsafe_allow_html=True)
 
 st.markdown("""
 <div class="instagram-btn">
