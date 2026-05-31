@@ -848,7 +848,7 @@ def render_home():
     
     <div class="cinematic-banner">
        <video class="cinematic-video" autoplay muted loop playsinline>
-            <source src="https://raw.githubusercontent.com/rekharaomahendran-hash/AARA_ADS/main/AARA.mp4" type="video/mp4">
+            <source src="https://raw.githubusercontent.com/rekharaomahendran-hash/AARA_ADS/main/AARA.MP4" type="video/mp4">
        </video>
     </div>
     """, unsafe_allow_html=True)
