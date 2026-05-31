@@ -234,7 +234,7 @@ html, body, [data-testid="stAppViewContainer"] {{
   width: 55px;
   height: 55px;
   background-color:#25D366;
-  border-radius: 20%;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -255,7 +255,7 @@ html, body, [data-testid="stAppViewContainer"] {{
   width: 55px;
   height: 55px;
   background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-  border-radius: 20%;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
