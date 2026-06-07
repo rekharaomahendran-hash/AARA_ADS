@@ -667,7 +667,7 @@ def render_header():
             """,
             unsafe_allow_html=True,
         )
-
+#· Fate · Rockwall · Dallas, TX
     st.markdown(
         f"""
         <div style="text-align:center; margin-top:6px;">
@@ -678,7 +678,7 @@ def render_header():
             Where Passion Meets Performance
           </div>
           <div style="font-size:0.95rem; color:{GOLD_SOFT};">
-            · Fate · Rockwall · Dallas, TX
+            · Rockwall/Fate  · Frisco/Little Elm  · Dallas, TX
           </div>
         </div>
         """,
