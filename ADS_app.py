@@ -725,7 +725,7 @@ st.markdown("""
     </a>
 </div>
 """,unsafe_allow_html=True)
-#https://www.instagram.com/reel/DYjC8gHtVBT/?igsh=NmJnNGR5Z3BlNHd3
+#https://www.instagram.com//DYjC8gHtVBT/?igsh=NmJnNGR5Z3BlNHd3
 st.markdown("""
 <div class="instagram-btn">
     <a href="https://www.instagram.com/aaradancestudio_dallas" target="_blank">
@@ -884,9 +884,10 @@ def render_home():
 
     # Render CSS-only slideshow (full-width inside content column)
     render_slideshow(image_paths, per_slide_seconds=6)
+    
     st.markdown("""
     <blockquote class="instagram-media" 
-        data-instgrm-permalink="https://www.instagram.com/reel/DY05YpjOP8n"
+        data-instgrm-permalink="https://www.instagram.com/reel/DY05YpjOP8n/"
         data-instgrm-version="14">
     </blockquote>
     <script async src="//www.instagram.com/embed.js"></script>
