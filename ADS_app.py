@@ -667,7 +667,7 @@ def render_header():
             """,
             unsafe_allow_html=True,
         )
-#· Fate · Rockwall · Dallas, TX
+#·  · Rockwall · Dallas, TX
     st.markdown(
         f"""
         <div style="text-align:center; margin-top:6px;">
@@ -1350,7 +1350,7 @@ def render_register():
             [
                 "",
                 f"Rockwall/Fate TX",
-                f"Frisco, TX",
+                f"Frisco/Little Elm TX",
             ],
             key="location",
             label_visibility="collapsed",
