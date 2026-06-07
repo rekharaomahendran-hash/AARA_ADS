@@ -915,7 +915,7 @@ def render_classes():
               <a class="btn-primary" href="/?page=Register">Register</a>
             </div>
           </div>
-
+          
           <div class="class-card">
             <div class="card-content">
               <div style="font-size:1.05rem; font-weight:700; color:{GOLD}; margin-bottom:8px;">Shining Stars (Ages 9+)</div>
@@ -938,6 +938,19 @@ def render_classes():
             <div class="card-footer" style="text-align:center;">
               <a class="btn-primary" href="/?page=Register">Register</a>
             </div>
+            
+          <div class="class-card">
+            <div class="card-content">
+              <div style="font-size:1.05rem; font-weight:700; color:{GOLD}; margin-bottom:8px;">Couple Dance</div>
+              <div style="color:{GOLD_SOFT};">Beginner / Intermediate</div>
+              <div style="color:{GOLD_SOFT}; margin-top:8px;">Wed &amp; Fri · 6:30-7:30 PM</div>
+              <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>4 classes: ${four}</b> · <b>8 classes: ${eight}</b></div>
+            </div>
+            
+            <div class="card-footer" style="text-align:center;">
+              <a class="btn-primary" href="/?page=Register">Register</a>
+            </div>
+          </div>   
           </div>
         </div>
         """,
