@@ -704,15 +704,15 @@ def render_early_banner():
         )
     else:
         # If early bird not active, show a subtle banner with current pricing
+        #Enrollment: <b>${pricing['enrollment']}</b>/month · 4 classes: <b>${pricing['four']}</b> <br> · 8 classes: <b>${pricing['eight']}</b> · Siblings offer: <b>$10</b>
         st.markdown(
             f"""
             <div class="early-banner" style="max-width:980px; margin:10px auto 16px auto; text-align:center; border:1px solid {GOLD}; background:transparent; color:{GOLD_SOFT}; padding:8px 16px; border-radius:999px;">
-              Enrollment: <b>${pricing['enrollment']}</b>/month · 4 classes: <b>${pricing['four']}</b> <br> · 8 classes: <b>${pricing['eight']}</b> · Siblings offer: <b>$10</b>
+              Enrollment: <b>${pricing['enrollment']}</b>/month · 4 classes: <b>${pricing['four']}</b> <br> · Siblings offer: <b>$10</b>
             </div>
             """,
             unsafe_allow_html=True,
         )
-
 
 render_header()
 render_early_banner()
