@@ -725,10 +725,10 @@ st.markdown("""
     </a>
 </div>
 """,unsafe_allow_html=True)
-
+#https://www.instagram.com/reel/DYjC8gHtVBT/?igsh=NmJnNGR5Z3BlNHd3
 st.markdown("""
 <div class="instagram-btn">
-    <a href="https://www.instagram.com/reel/DYjC8gHtVBT/?igsh=NmJnNGR5Z3BlNHd3" target="_blank">
+    <a href="https://www.instagram.com/aaradancestudio_dallas" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
     </a>
 </div>
