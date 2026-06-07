@@ -932,7 +932,7 @@ def render_classes():
             <div class="card-content">
               <div style="font-size:1.05rem; font-weight:700; color:{GOLD}; margin-bottom:8px;">Dream Chasers (Ladies 18+)</div>
               <div style="color:{GOLD_SOFT};">Beginner / Intermediate</div>
-              <div style="color:{GOLD_SOFT}; margin-top:8px;">Thu 6:30-7:30 PM · Sat 10:30-11:30 AM</div>
+              <div style="color:{GOLD_SOFT}; margin-top:8px;">Thu 6:30-7:30 PM · Fri 6:30-7:30 PM</div>
               <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>4 classes: ${four}</b></div>
             </div>
             <div class="card-footer" style="text-align:center;">
@@ -942,9 +942,9 @@ def render_classes():
             
           <div class="class-card">
             <div class="card-content">
-              <div style="font-size:1.05rem; font-weight:700; color:{GOLD}; margin-bottom:8px;">Dream Chasers (Ladies 18+)</div>
+              <div style="font-size:1.05rem; font-weight:700; color:{GOLD}; margin-bottom:8px;">Couple Groove</div>
               <div style="color:{GOLD_SOFT};">Beginner / Intermediate</div>
-              <div style="color:{GOLD_SOFT}; margin-top:8px;">Thu 6:30-7:30 PM · Sat 10:30-11:30 AM</div>
+              <div style="color:{GOLD_SOFT}; margin-top:8px;">Fri 7:30-8:30 PM</div>
               <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>4 classes: ${four}</b></div>
             </div>
             <div class="card-footer" style="text-align:center;">
