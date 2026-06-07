@@ -248,7 +248,7 @@ html, body, [data-testid="stAppViewContainer"] {{
   object-fit: contain;
 }}
 
-.-btn {{
+.instagram-btn {{
   position: fixed;
   top: 70px;
   right: 70px; /* left of WhatsApp */
@@ -263,7 +263,7 @@ html, body, [data-testid="stAppViewContainer"] {{
   z-index: 9999;
 }}
 
-.-btn img {{
+.instagram-btn img {{
   width: 28px;
   height: 28px;
   object-fit: contain;
@@ -275,7 +275,7 @@ html, body, [data-testid="stAppViewContainer"] {{
     top: 40px;   /* moved DOWN to avoid Streamlit banner */
     right: 15px;
   }}
-  .-btn {{
+  .instagram-btn {{
     top: 40px;   /* same vertical alignment */
     right: 75px;  /* still left of WhatsApp */
   }}
@@ -287,7 +287,7 @@ html, body, [data-testid="stAppViewContainer"] {{
     top: 60px;
     right: 15px;
   }}
-  .-btn {{
+  .instagram-btn {{
     top: 60px;
     right: 85px;
   }}
@@ -884,20 +884,7 @@ def render_home():
 
     # Render CSS-only slideshow (full-width inside content column)
     render_slideshow(image_paths, per_slide_seconds=6)
-    
-    st.markdown("""
-    <div style="max-width: 420px; margin: 0 auto;">
-      <blockquote 
-          class="instagram-media" 
-          data-instgrm-permalink="https://www.instagram.com/reel/DY05YpjOP8n/?utm_source=ig_embed&utm_campaign=loading"
-          data-instgrm-version="14"
-          style="background:#FFF; border:0; margin:0; padding:0; width:100%;"
-      ></blockquote>
-    </div>
-    
-    <script async src="//www.instagram.com/embed.js"></script>
-    """, unsafe_allow_html=True)
-    
+
     render_qr_section()
 
 # CLASSES PAGE (dynamic pricing) with responsive grid (3 columns on desktop)
@@ -991,7 +978,7 @@ def render_classes():
 # --- ADDRESS CARDS (MULTI‑LOCATION SUPPORT) ---
 
 # Location 1 — Fate / Rockwall / Dallas
-studio_address_1 = "AARA Dance Studio, Rockwall/Fate, Dallas, TX"
+studio_address_1 = "AARA Dance Studio, Fate, Rockwall, Dallas, TX"
 google_short_link_1 = "https://maps.app.goo.gl/6SFoVDtau8oQULao9?g_st=ic"
 
 import urllib.parse
