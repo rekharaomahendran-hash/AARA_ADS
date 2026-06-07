@@ -885,19 +885,6 @@ def render_home():
     # Render CSS-only slideshow (full-width inside content column)
     render_slideshow(image_paths, per_slide_seconds=6)
     
-    st.markdown("""
-    <div style="max-width: 420px; margin: 0 auto;">
-      <blockquote 
-          class="instagram-media" 
-          data-instgrm-permalink="https://www.instagram.com/reel/DY05YpjOP8n/?utm_source=ig_embed&utm_campaign=loading"
-          data-instgrm-version="14"
-          style="background:#FFF; border:0; margin:0; padding:0; width:100%;"
-      ></blockquote>
-    </div>
-    <script async src="//www.instagram.com/embed.js"></script>
-    """, unsafe_allow_html=True)
-
-
     render_qr_section()
 
 # CLASSES PAGE (dynamic pricing) with responsive grid (3 columns on desktop)
