@@ -942,7 +942,7 @@ def render_classes():
             
           <div class="class-card">
             <div class="card-content">
-              <div style="font-size:1.05rem; font-weight:700; color:{GOLD}; margin-bottom:8px;">Couple Groove</div>
+              <div style="font-size:1.05rem; font-weight:700; color:{GOLD}; margin-bottom:8px;">Couple Groove (18+)</div>
               <div style="color:{GOLD_SOFT};">Beginner / Intermediate</div>
               <div style="color:{GOLD_SOFT}; margin-top:8px;">Fri 7:30-8:30 PM</div>
               <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>4 classes: ${four}</b></div>
@@ -975,32 +975,54 @@ def render_classes():
         unsafe_allow_html=True,
     )
 
-    # Address card under Register Now (paste after the Register CTA)
-    studio_address = "AARA Dance Studio, Fate, Rockwall, Dallas, TX"
-    google_short_link = "https://maps.app.goo.gl/6SFoVDtau8oQULao9?g_st=ic"
-    # Apple Maps fallback using the address (URL-encoded)
-    import urllib.parse
-    apple_maps_link = f"https://maps.apple.com/?q={urllib.parse.quote(studio_address)}"
-    
-    st.markdown(
-        f"""
-        <div class="classes-address-row">
-          <div class="address-card">
-            <div class="title">Visit Us</div>
-            <div style="color:#f5e8c7; line-height:1.4;">{studio_address}</div>
-            <div style="margin-top:10px;" class="address-links">
-              <a href="{google_short_link}" target="_blank" rel="noopener">Open in Google Maps</a>
-              <a href="{apple_maps_link}" target="_blank" rel="noopener">Open in Apple Maps</a>
-            </div>
-            <div style="margin-top:8px; color:#9ca3af; font-size:0.85rem;">
-              Parking available · Please arrive 10 minutes early
-            </div>
-          </div>
+# --- ADDRESS CARDS (MULTI‑LOCATION SUPPORT) ---
+
+# Location 1 — Fate / Rockwall / Dallas
+studio_address_1 = "AARA Dance Studio, Fate, Rockwall, Dallas, TX"
+google_short_link_1 = "https://maps.app.goo.gl/6SFoVDtau8oQULao9?g_st=ic"
+
+import urllib.parse
+apple_maps_link_1 = f"https://maps.apple.com/?q={urllib.parse.quote(studio_address_1)}"
+
+# Location 2 — Frisco (Once every couple of hours)
+studio_address_2 = "5444 FM 423, Frisco, TX 75034"
+google_short_link_2 = "https://maps.app.goo.gl/dP4QgbkXWA1aCGqy7"
+apple_maps_link_2 = f"https://maps.apple.com/?q={urllib.parse.quote(studio_address_2)}"
+
+st.markdown(
+    f"""
+    <div class="classes-address-row" style="display:flex; gap:20px; flex-wrap:wrap;">
+
+      <!-- LOCATION 1 -->
+      <div class="address-card" style="flex:1; min-width:260px;">
+        <div class="title">Visit Us</div>
+        <div style="color:#f5e8c7; line-height:1.4;">{studio_address_1}</div>
+        <div style="margin-top:10px;" class="address-links">
+          <a href="{google_short_link_1}" target="_blank" rel="noopener">Open in Google Maps</a>
+          <a href="{apple_maps_link_1}" target="_blank" rel="noopener">Open in Apple Maps</a>
         </div>
-        """,
-        unsafe_allow_html=True,
-    )
-    st.markdown('</div>', unsafe_allow_html=True)
+        <div style="margin-top:8px; color:#9ca3af; font-size:0.85rem;">
+          Parking available · Please arrive 10 minutes early
+        </div>
+      </div>
+
+      <!-- LOCATION 2 -->
+      <div class="address-card" style="flex:1; min-width:260px;">
+        <div class="title">Frisco Location</div>
+        <div style="color:#f5e8c7; line-height:1.4;">{studio_address_2}</div>
+        <div style="margin-top:10px;" class="address-links">
+          <a href="{google_short_link_2}" target="_blank" rel="noopener">Open in Google Maps</a>
+          <a href="{apple_maps_link_2}" target="_blank" rel="noopener">Open in Apple Maps</a>
+        </div>
+        <div style="margin-top:8px; color:#9ca3af; font-size:0.85rem;">
+          Classes available once every few hours · Limited slots
+        </div>
+      </div>
+
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
 
 # ABOUT PAGE
 def render_about():
