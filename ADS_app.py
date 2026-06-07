@@ -248,7 +248,7 @@ html, body, [data-testid="stAppViewContainer"] {{
   object-fit: contain;
 }}
 
-.instagram-btn {{
+.-btn {{
   position: fixed;
   top: 70px;
   right: 70px; /* left of WhatsApp */
@@ -263,7 +263,7 @@ html, body, [data-testid="stAppViewContainer"] {{
   z-index: 9999;
 }}
 
-.instagram-btn img {{
+.-btn img {{
   width: 28px;
   height: 28px;
   object-fit: contain;
@@ -275,7 +275,7 @@ html, body, [data-testid="stAppViewContainer"] {{
     top: 40px;   /* moved DOWN to avoid Streamlit banner */
     right: 15px;
   }}
-  .instagram-btn {{
+  .-btn {{
     top: 40px;   /* same vertical alignment */
     right: 75px;  /* still left of WhatsApp */
   }}
@@ -287,7 +287,7 @@ html, body, [data-testid="stAppViewContainer"] {{
     top: 60px;
     right: 15px;
   }}
-  .instagram-btn {{
+  .-btn {{
     top: 60px;
     right: 85px;
   }}
