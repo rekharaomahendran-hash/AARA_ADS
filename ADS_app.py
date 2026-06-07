@@ -886,7 +886,7 @@ def render_home():
     render_slideshow(image_paths, per_slide_seconds=6)
     st.markdown("""
     <blockquote class="instagram-media" 
-        data-instgrm-permalink="https://www.instagram.com/reel/DY05YpjOP8n/?utm_source=ig_web_copy_link"
+        data-instgrm-permalink="https://www.instagram.com/reel/DY05YpjOP8n"
         data-instgrm-version="14">
     </blockquote>
     <script async src="//www.instagram.com/embed.js"></script>
