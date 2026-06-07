@@ -1340,7 +1340,7 @@ def render_register():
                 f"Tiny Stars(Age 5-8)",
                 f"Shining Stars(Age 9+)",
                 f"Dream Chasers(Ladies 18+)",
-                Couples Groove (18+)",
+                "Couples Groove (18+)",
             ],
             key="class",
             label_visibility="collapsed",
