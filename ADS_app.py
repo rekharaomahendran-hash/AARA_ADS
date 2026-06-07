@@ -645,7 +645,7 @@ def _img_to_base64(path):
 
 # HEADER - centered glowing logo (used on all pages)
 def render_header():
-    # Use a full-width HTML block with embedded base64 image to ensure perfect centering on desktop + mobile
+    # Use a full-width HTML block with ded base64 image to ensure perfect centering on desktop + mobile
     if os.path.exists(LOGO_PATH):
         b64 = _img_to_base64(LOGO_PATH)
         if b64:
@@ -886,12 +886,18 @@ def render_home():
     render_slideshow(image_paths, per_slide_seconds=6)
     
     st.markdown("""
-    <blockquote class="instagram-media" 
-        data-instgrm-permalink="https://www.instagram.com/reel/DY05YpjOP8n/"
-        data-instgrm-version="14">
-    </blockquote>
+    <div style="max-width: 420px; margin: 0 auto;">
+        <blockquote 
+            class="instagram-media" 
+            data-instgrm-permalink="https://www.instagram.com/reel/DY05YpjOP8n/"
+            data-instgrm-version="14"
+            style="background:#000; border:0; margin:0 auto; padding:0; width:100%;"
+        ></blockquote>
+    </div>
+    
     <script async src="//www.instagram.com/embed.js"></script>
     """, unsafe_allow_html=True)
+
 
     render_qr_section()
 
