@@ -875,16 +875,6 @@ def render_home():
         unsafe_allow_html=True,
     )
 
-    st.markdown("""
-    <blockquote 
-        class="instagram-media" 
-        data-instgrm-permalink="https://www.instagram.com/reel/DY05YpjOP8n/?utm_source=ig_embed&utm_campaign=loading"
-        data-instgrm-version="14"
-        style="background:#FFF; border:0; margin:0 auto; padding:0; width:100%; max-width:540px;"
-    ></blockquote>
-    
-    <script async src="//www.instagram.com/embed.js"></script>
-    """, unsafe_allow_html=True)
     
     # Collect slideshow images (slide1.jpg ... slide5.jpg)
     image_paths = []
