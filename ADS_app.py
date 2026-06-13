@@ -704,11 +704,11 @@ def render_early_banner():
         )
     else:
         # If early bird not active, show a subtle banner with current pricing
-        #Enrollment: <b>${pricing['enrollment']}</b>/month · 4 classes: <b>${pricing['four']}</b> <br> · 8 classes: <b>${pricing['eight']}</b> · Siblings offer: <b>$10</b>
+        #Enrollment: <b>${pricing['enrollment']}</b>/month · 4 classes: <b>${pricing['four']}</b> <br> · 8 classes: <b>${pricing['eight']}</b>
         st.markdown(
             f"""
             <div class="early-banner" style="max-width:980px; margin:10px auto 16px auto; text-align:center; border:1px solid {GOLD}; background:transparent; color:{GOLD_SOFT}; padding:8px 16px; border-radius:999px;">
-              Enrollment: <b>${pricing['enrollment']}</b>/month · 4 classes: <b>${pricing['four']}</b> <br> · Siblings offer: <b>$10</b>
+              Enrollment: <b>${pricing['enrollment']}</b>/month · 4 classes: <b>${pricing['four']}</b>
             </div>
             """,
             unsafe_allow_html=True,
@@ -1334,10 +1334,9 @@ def render_register():
             "",
             [
                 "",
-                f"Siblings Price (${enroll_price-10}/month)",
                 f"4 Classes (${pricing['four']}/month)",
                 f"Couple Groove - 4 Classes (${2*enroll_price}/couple)",
-                "Drop-in ($15/session)",
+                "Drop-in ($20/session)",
             ],
             key="enroll",
             label_visibility="collapsed",
