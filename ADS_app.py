@@ -708,7 +708,7 @@ def render_early_banner():
         st.markdown(
             f"""
             <div class="early-banner" style="max-width:980px; margin:10px auto 16px auto; text-align:center; border:1px solid {GOLD}; background:transparent; color:{GOLD_SOFT}; padding:8px 16px; border-radius:999px;">
-              Enrollment: <b>${pricing['enrollment']}</b>/month · 4 classes: <b>${pricing['four']}</b>
+              Enrollment: <b>${pricing['enrollment']}</b>/month (4 classes)
             </div>
             """,
             unsafe_allow_html=True,
