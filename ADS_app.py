@@ -928,7 +928,7 @@ def render_classes():
               <div style="color:{GOLD_SOFT};">Beginner / Intermediate</div>
               <div style="color:{GOLD_SOFT}; margin-top:8px;">Rockwall/Fate : Wed · 6:30-7:30 PM</div>
               <div style="color:{GOLD_SOFT}; margin-top:8px;">Frisco / Little elm / Preston Road : Fri · 7:30-8:30 PM</div>
-              <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>4 classes a month / 1 hr </b></div>
+              <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>Total 4 classes a month - 1 class a week </b></div>
               <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>Fees : ${four}</b></div>
             </div>
             <div class="card-footer" style="text-align:center;">
@@ -942,7 +942,7 @@ def render_classes():
               <div style="color:{GOLD_SOFT};">Beginner / Intermediate</div>
               <div style="color:{GOLD_SOFT}; margin-top:8px;">Rockwall/Fate : Tue · 6:30-7:30 PM</div>
               <div style="color:{GOLD_SOFT}; margin-top:8px;">Frisco / Little elm / Preston Road : Fri · 6:30-7:30 PM</div>
-              <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>4 classes a month / 1 hr  </b></div>
+              <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>Total 4 classes a month - 1 class a week </b></div>
               <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>Fees : ${four}</b></div>
             </div>
             <div class="card-footer" style="text-align:center;">
@@ -955,7 +955,7 @@ def render_classes():
               <div style="font-size:1.05rem; font-weight:700; color:{GOLD}; margin-bottom:8px;">Dream Chasers (Ladies 18+)</div>
               <div style="color:{GOLD_SOFT};">Beginner / Intermediate</div>
               <div style="color:{GOLD_SOFT}; margin-top:8px;">Every Thu 7-8 PM </div>
-              <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>4 classes a month / 1 hr </b></div>
+              <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>Total 4 classes a month - 1 class a week </b></div>
               <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>Fees : ${four}</b></div>
             </div>
             <div class="card-footer" style="text-align:center;">
@@ -968,7 +968,7 @@ def render_classes():
               <div style="font-size:1.05rem; font-weight:700; color:{GOLD}; margin-bottom:8px;">Couple Groove (18+)</div>
               <div style="color:{GOLD_SOFT};">Beginner / Intermediate</div>
               <div style="color:{GOLD_SOFT}; margin-top:8px;">Fri 7:30-8:30 PM</div>
-              <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>4 classes a month / 1 hr </b></div>
+              <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>Total 4 classes a month - 1 class a week </b></div>
               <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>Fees (for couples) : $120</b></div>
             </div>
             <div class="card-footer" style="text-align:center;">
