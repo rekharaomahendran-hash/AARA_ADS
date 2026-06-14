@@ -969,7 +969,7 @@ def render_classes():
               <div style="color:{GOLD_SOFT};">Beginner / Intermediate</div>
               <div style="color:{GOLD_SOFT}; margin-top:8px;">Fri 7:30-8:30 PM</div>
               <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>4 classes a month / 1 hr </b></div>
-              <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>Fees : ${four}</b></div>
+              <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>Fees (for couples) : $120</b></div>
             </div>
             <div class="card-footer" style="text-align:center;">
               <a class="btn-primary" href="/?page=Register">Register</a>
