@@ -1009,7 +1009,7 @@ import urllib.parse
 apple_maps_link_1 = f"https://maps.apple.com/?q={urllib.parse.quote(studio_address_1)}"
 
 # Location 2 — Frisco (Once every couple of hours)
-studio_address_2 = "5444 FM 423, Frisco, TX 75034"
+studio_address_2 = "Frisco Performing Arts Center, 9360, Preston Road, Frisco, TX 75033"
 google_short_link_2 = "https://maps.app.goo.gl/dP4QgbkXWA1aCGqy7"
 apple_maps_link_2 = f"https://maps.apple.com/?q={urllib.parse.quote(studio_address_2)}"
 
@@ -1032,7 +1032,7 @@ st.markdown(
 
       <!-- LOCATION 2 -->
       <div class="address-card" style="flex:1; min-width:260px;">
-        <div class="title">Frisco/Little Elm Location</div>
+        <div class="title">Frisco Location</div>
         <div style="color:#f5e8c7; line-height:1.4;">{studio_address_2}</div>
         <div style="margin-top:10px;" class="address-links">
           <a href="{google_short_link_2}" target="_blank" rel="noopener">Open in Google Maps</a>
