@@ -678,7 +678,7 @@ def render_header():
             Where Passion Meets Performance
           </div>
           <div style="font-size:0.95rem; color:{GOLD_SOFT};">
-            · Rockwall/Fate  · Frisco/Little Elm  · Dallas, TX
+            · Rockwall/Fate  · Frisco  · Dallas, TX
           </div>
         </div>
         """,
