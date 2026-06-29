@@ -1030,7 +1030,7 @@ st.markdown(
         </div>
          <div style="margin-top:8px; color:#9ca3af; font-size:0.85rem;">
           Please note that there will be no classes this week(July 1st) due to the holiday.
-          Classes will resume as per the regular schedule next week.
+          Classes will resume as per the regular schedule next week(July 6th).
         </div>
       </div>
 
