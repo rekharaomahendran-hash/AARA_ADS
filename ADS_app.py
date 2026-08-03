@@ -1030,10 +1030,22 @@ apple_maps_link_2 = f"https://maps.apple.com/?q={urllib.parse.quote(studio_addre
 st.markdown(
     f"""
     <div class="classes-address-row" style="display:flex; gap:20px; flex-wrap:wrap;">
-
+ <div class="title">Visit Us</div>
       <!-- LOCATION 1 -->
+        <div class="address-card" style="flex:1; min-width:260px;">
+        <div class="title">Frisco Location</div>
+        <div style="color:#f5e8c7; line-height:1.4;">{studio_address_2}</div>
+        <div style="margin-top:10px;" class="address-links">
+          <a href="{google_short_link_2}" target="_blank" rel="noopener">Open in Google Maps</a>
+          <a href="{apple_maps_link_2}" target="_blank" rel="noopener">Open in Apple Maps</a>
+        </div>
+        <div style="margin-top:8px; color:#9ca3af; font-size:0.85rem;">
+          Classes available every Friday evening · Limited slots only
+        </div>
+      </div>
+
+      <!-- LOCATION 2 -->
       <div class="address-card" style="flex:1; min-width:260px;">
-        <div class="title">Visit Us</div>
         <div style="color:#f5e8c7; line-height:1.4;">{studio_address_1}</div>
         <div style="margin-top:10px;" class="address-links">
           <a href="{google_short_link_1}" target="_blank" rel="noopener">Open in Google Maps</a>
@@ -1045,19 +1057,6 @@ st.markdown(
          <div style="margin-top:8px; color:#9ca3af; font-size:0.85rem;">
           Please note that there will be no classes this week(July 1st) due to the holiday.
           Classes will resume as per the regular schedule next week(July 6th).
-        </div>
-      </div>
-
-      <!-- LOCATION 2 -->
-      <div class="address-card" style="flex:1; min-width:260px;">
-        <div class="title">Frisco Location</div>
-        <div style="color:#f5e8c7; line-height:1.4;">{studio_address_2}</div>
-        <div style="margin-top:10px;" class="address-links">
-          <a href="{google_short_link_2}" target="_blank" rel="noopener">Open in Google Maps</a>
-          <a href="{apple_maps_link_2}" target="_blank" rel="noopener">Open in Apple Maps</a>
-        </div>
-        <div style="margin-top:8px; color:#9ca3af; font-size:0.85rem;">
-          Classes available every Friday evening · Limited slots only
         </div>
       </div>
 
