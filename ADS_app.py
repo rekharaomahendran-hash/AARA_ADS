@@ -1002,6 +1002,7 @@ def render_classes():
         <div style="max-width:920px; margin:12px auto 8px auto; padding:12px; border-radius:12px; background: rgba(17,17,17,0.6); border:1px solid {BORDER}; text-align:center;">
           <div style="font-weight:700; color:{GOLD}; margin-bottom:6px;">Online &amp; Zoom sessions are available</div>
           <div style="color:{GOLD_SOFT};">Drop-in classes for any batch: <b>$20/session</b></div>
+          <div style="color:{GOLD_SOFT};">Trial class for any batch: <b>$15/session</b></div>
         </div>
         """,
         unsafe_allow_html=True,
