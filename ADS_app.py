@@ -1043,10 +1043,9 @@ st.markdown(
           Classes available every Wednesday and friday evening · Limited slots only
         </div>
       </div>
-
       <!-- LOCATION 2 -->
       <div class="address-card" style="flex:1; min-width:260px;">
-       <div class="title">ROCKWALL/FATE Location</div>
+       <div class="title">ROCKWALL Location</div>
         <div style="color:#f5e8c7; line-height:1.4;">{studio_address_1}</div>
         <div style="margin-top:10px;" class="address-links">
           <a href="{google_short_link_1}" target="_blank" rel="noopener">Open in Google Maps</a>
