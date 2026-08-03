@@ -1016,15 +1016,15 @@ def render_classes():
 # --- ADDRESS CARDS (MULTI‑LOCATION SUPPORT) ---
 
 # Location 1 — Fate / Rockwall / Dallas
-studio_address_1 = "AARA Dance Studio, Rockwall/Fate, Dallas, TX"
-google_short_link_1 = "https://maps.app.goo.gl/6SFoVDtau8oQULao9?g_st=ic"
+studio_address_1 = "315, Spirehaven Dr, Rockwall/Fate, TX 75087"
+google_short_link_1 = "https://maps.app.goo.gl/3gsspLpvRrihbrem7"
 
 import urllib.parse
 apple_maps_link_1 = f"https://maps.apple.com/?q={urllib.parse.quote(studio_address_1)}"
 
 # Location 2 — Frisco (Once every couple of hours)
 studio_address_2 = "Frisco Performing Arts Center, 9360, Preston Road, Frisco, TX 75033"
-google_short_link_2 = "https://maps.app.goo.gl/dP4QgbkXWA1aCGqy7"
+google_short_link_2 = "https://maps.app.goo.gl/vdZaaHsKL7vUxrdbA"
 apple_maps_link_2 = f"https://maps.apple.com/?q={urllib.parse.quote(studio_address_2)}"
 
 st.markdown(
