@@ -1585,7 +1585,7 @@ def render_register():
                 "class_type": class_type,
                 "location_pref": location_pref,
                 "mode": mode,
-                "workshops": "; ".join(workshops),
+                
                 "level": level,
                 "style": "",
                 "pref_time": pref_time,
