@@ -954,7 +954,7 @@ def render_classes():
             <div class="card-content">
               <div style="font-size:1.05rem; font-weight:700; color:{GOLD}; margin-bottom:8px;">Dream Chasers (Ladies 18+)</div>
               <div style="color:{GOLD_SOFT};">Beginner / Intermediate</div>
-              <div style="color:{GOLD_SOFT}; margin-top:8px;">Every Thursday 7-8 PM (Ladies dance fitness session) </div>
+              <div style="color:{GOLD_SOFT}; margin-top:8px;">Location - Rockwall/Fate Every Thursday 7-8 PM (Ladies dance fitness session) </div>
               <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>Total 4 classes a month - 1 class a week </b></div>
               <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>Fees : ${four}</b></div>
             </div>
