@@ -1359,8 +1359,11 @@ def render_register():
             [
                 "",
                 f"4 Classes (${pricing['four']}/month)",
+                f"8 Classes - (2 months) (${pricing['four']}/month)",
                 f"Couple Groove - 4 Classes (${2*enroll_price}/couple)",
+                "Trial Class ($15/session)",
                 "Drop-in ($20/session)",
+                "Siblings ($10 Off from regular fee)",
             ],
             key="enroll",
             label_visibility="collapsed",
