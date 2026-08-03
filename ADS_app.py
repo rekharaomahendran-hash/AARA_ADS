@@ -1016,7 +1016,7 @@ def render_classes():
 # --- ADDRESS CARDS (MULTI‑LOCATION SUPPORT) ---
 
 # Location 1 — Fate / Rockwall / Dallas
-studio_address_1 = "AARA Dance Studio, Rockwall/Fate, Dallas, TX"
+studio_address_1 = "315, Spirehaven Dr, Rockwall/Fate, Dallas, TX"
 google_short_link_1 = "https://maps.app.goo.gl/6SFoVDtau8oQULao9?g_st=ic"
 
 import urllib.parse
