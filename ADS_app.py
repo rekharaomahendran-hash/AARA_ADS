@@ -1016,16 +1016,16 @@ def render_classes():
 # --- ADDRESS CARDS (MULTI‑LOCATION SUPPORT) ---
 
 # Location 1 — Frisco
-studio_address_1 = "Frisco Performing Arts Center, 9360, Preston Road, Frisco, TX 75033"
-google_short_link_1 = "https://maps.app.goo.gl/vdZaaHsKL7vUxrdbA"
-apple_maps_link_1 = f"https://maps.apple.com/?q={urllib.parse.quote(studio_address_1)}"
+studio_address_2 = "Frisco Performing Arts Center, 9360, Preston Road, Frisco, TX 75033"
+google_short_link_2 = "https://maps.app.goo.gl/vdZaaHsKL7vUxrdbA"
+apple_maps_link_2 = f"https://maps.apple.com/?q={urllib.parse.quote(studio_address_2)}"
 
 # Location 2 — Fate / Rockwall / Dallas
-studio_address_2 = "315, Spirehaven Dr, Rockwall/Fate, TX"
-google_short_link_2 = "https://maps.app.goo.gl/3gsspLpvRrihbrem7"
+studio_address_1 = "315, Spirehaven Dr, Rockwall/Fate, TX"
+google_short_link_1 = "https://maps.app.goo.gl/3gsspLpvRrihbrem7"
 
 import urllib.parse
-apple_maps_link_2 = f"https://maps.apple.com/?q={urllib.parse.quote(studio_address_2)}"
+apple_maps_link_2 = f"https://maps.apple.com/?q={urllib.parse.quote(studio_address_1)}"
 
 st.markdown(
     f"""
