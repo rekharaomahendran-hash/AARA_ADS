@@ -966,11 +966,11 @@ def render_classes():
          <div class="class-card">
             <div class="card-content">
               <div style="font-size:1.05rem; font-weight:700; color:{GOLD}; margin-bottom:8px;">Dream Chasers (Ladies 18+)</div>
-              <div style="color:{GOLD_SOFT};">Beginner / Intermediate</div>
-              <div style="color:{GOLD_SOFT}; margin-top:8px;">Every Wednesday 6-7 PM (Ladies Dance session) </div>
-              <div style="color:{GOLD_SOFT}; margin-top:8px;">Location - FRISCO PERFORMING ARTS CENTER 9360 Preston Road FRISCO TX 75033</div>
-              <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>Total 4 classes a month - 1 class a week </b></div>
-              <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>Fees : ${four}</b></div>
+              <div style="color:{PINK_SOFT};">Beginner / Intermediate</div>
+              <div style="color:{PINK_SOFT}; margin-top:8px;">Every Wednesday 6-7 PM (Ladies Dance session) </div>
+              <div style="color:{PINK_SOFT}; margin-top:8px;">Location - FRISCO PERFORMING ARTS CENTER 9360 Preston Road FRISCO TX 75033</div>
+              <div style="color:{PINK_SOFT}; margin-top:12px;"><b>Total 4 classes a month - 1 class a week </b></div>
+              <div style="color:{PINK_SOFT}; margin-top:12px;"><b>Fees : ${four}</b></div>
             </div>
             <div class="card-footer" style="text-align:center;">
               <a class="btn-primary" href="/?page=Register">Register</a>
