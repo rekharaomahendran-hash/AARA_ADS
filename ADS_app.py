@@ -925,7 +925,7 @@ def render_classes():
           <div class="class-card">
             <div class="card-content">
               <div style="font-size:1.05rem; font-weight:700; color:{GOLD}; margin-bottom:8px;">Tiny Stars (5+ years)</div>
-              <div style="color:{GOLD_SOFT};">Beginner / Intermediate</div>
+              <div style="color:{GOLD_SOFT};">Beginner</div>
               <div style="color:{GOLD_SOFT}; margin-top:8px;">Rockwall/Fate : Every Wednesday · 6:30-7:30 PM</div>
               <div style="color:{GOLD_SOFT}; margin-top:8px;">Frisco / Little elm / Preston Road : Fri · 7:30-8:30 PM</div>
               <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>Total 4 classes a month - 1 class a week </b></div>
@@ -939,7 +939,7 @@ def render_classes():
           <div class="class-card">
             <div class="card-content">
               <div style="font-size:1.05rem; font-weight:700; color:{GOLD}; margin-bottom:8px;">Shining Stars (Ages 9+)</div>
-              <div style="color:{GOLD_SOFT};">Beginner / Intermediate</div>
+              <div style="color:{GOLD_SOFT};">Intermediate</div>
               <div style="color:{GOLD_SOFT}; margin-top:8px;">Rockwall/Fate : Every Tuesday · 6:30-7:30 PM</div>
               <div style="color:{GOLD_SOFT}; margin-top:8px;">Frisco / Little elm / Preston Road : Fri · 6:30-7:30 PM</div>
               <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>Total 4 classes a month - 1 class a week </b></div>
