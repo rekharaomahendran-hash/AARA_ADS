@@ -926,7 +926,7 @@ def render_classes():
             <div class="card-content">
               <div style="font-size:1.05rem; font-weight:700; color:{GOLD}; margin-bottom:8px;">Tiny Stars (5+ years)</div>
               <div style="color:{GOLD_SOFT};">Beginner</div>
-              <div style="color:{GOLD_SOFT}; margin-top:8px;">Rockwall/Fate : Every Wednesday · 6:30-7:30 PM</div>
+              <div style="color:{GOLD_SOFT}; margin-top:8px;">Rockwall/Fate : Every Wednesday · 5:30-6:30 PM</div>
               <div style="color:{GOLD_SOFT}; margin-top:8px;">Frisco / Little elm / Preston Road : Fri · 7:30-8:30 PM</div>
               <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>Total 4 classes a month - 1 class a week </b></div>
               <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>Fees : ${four}</b></div>
@@ -940,7 +940,7 @@ def render_classes():
             <div class="card-content">
               <div style="font-size:1.05rem; font-weight:700; color:{GOLD}; margin-bottom:8px;">Shining Stars (Ages 9+)</div>
               <div style="color:{GOLD_SOFT};">Intermediate</div>
-              <div style="color:{GOLD_SOFT}; margin-top:8px;">Rockwall/Fate : Every Tuesday · 6:30-7:30 PM</div>
+              <div style="color:{GOLD_SOFT}; margin-top:8px;">Rockwall/Fate : Every Tuesday · 5:00 - 6:00 PM</div>
               <div style="color:{GOLD_SOFT}; margin-top:8px;">Frisco / Little elm / Preston Road : Fri · 6:30-7:30 PM</div>
               <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>Total 4 classes a month - 1 class a week </b></div>
               <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>Fees : ${four}</b></div>
@@ -967,7 +967,7 @@ def render_classes():
             <div class="card-content">
               <div style="font-size:1.05rem; font-weight:700; color:{GOLD}; margin-bottom:8px;">Frisco - Dream Chasers (Ladies 18+)</div>
               <div style="color:{GOLD_SOFT};">Beginner / Intermediate</div>
-              <div style="color:{GOLD_SOFT}; margin-top:8px;">Every Wednesday 6-7 PM (Ladies Dance session) </div>
+              <div style="color:{GOLD_SOFT}; margin-top:8px;">Every Monday 7:00 - 8:00 PM (Ladies Dance session) </div>
               <div style="color:{GOLD_SOFT}; margin-top:8px;">Location - FRISCO PERFORMING ARTS CENTER 9360 Preston Road FRISCO TX 75033</div>
               <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>Total 4 classes a month - 1 class a week </b></div>
               <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>Fees : ${four}</b></div>
@@ -983,7 +983,7 @@ def render_classes():
               <div style="color:{GOLD_SOFT};">Beginner / Intermediate</div>
               <div style="color:{GOLD_SOFT}; margin-top:8px;">Fri 7:30-8:30 PM</div>
               <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>Total 4 classes a month - 1 class a week </b></div>
-              <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>Fees (for couples) : $120</b></div>
+              <div style="color:{GOLD_SOFT}; margin-top:12px;"><b>Fees (for couples) : $110</b></div>
             </div>
             <div class="card-footer" style="text-align:center;">
               <a class="btn-primary" href="/?page=Register">Register</a>
@@ -1041,7 +1041,7 @@ st.markdown(
           <a href="{apple_maps_link_2}" target="_blank" rel="noopener">Open in Apple Maps</a>
         </div>
         <div style="margin-top:8px; color:#9ca3af; font-size:0.85rem;">
-          Classes available every Wednesday and friday evening · Limited slots only
+          Classes available every Monday and Friday evening · Limited slots only
         </div>
       </div>
       <!-- LOCATION 2 -->
